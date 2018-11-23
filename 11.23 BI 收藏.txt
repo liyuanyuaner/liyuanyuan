@@ -1,0 +1,72 @@
+mysql> use hello_mysql;
+Database changed
+mysql> create table sc(id,name)
+    -> ^C
+mysql> create table sc(id int auto_increment primary key,
+    -> name varchar(30));
+Query OK, 0 rows affected (0.41 sec)
+
+mysql> desc sc;
++-------+-------------+------+-----+---------+----------------+
+| Field | Type        | Null | Key | Default | Extra          |
++-------+-------------+------+-----+---------+----------------+
+| id    | int(11)     | NO   | PRI | NULL    | auto_increment |
+| name  | varchar(30) | YES  |     | NULL    |                |
++-------+-------------+------+-----+---------+----------------+
+2 rows in set (0.00 sec)
+
+mysql> insert into sc(id,name)
+    -> values(1,"weiyi"),(2,"xie"),
+    -> (3,"waitao"),(4,"kuzi"),(5,"shuiyi");
+Query OK, 5 rows affected (0.18 sec)
+Records: 5  Duplicates: 0  Warnings: 0
+
+mysql> select * from sc;
++----+--------+
+| id | name   |
++----+--------+
+|  1 | weiyi  |
+|  2 | xie    |
+|  3 | waitao |
+|  4 | kuzi   |
+|  5 | shuiyi |
++----+--------+
+5 rows in set (0.00 sec)
+
+mysql> insert into sc(id,name)
+    -> values(6,"wazi");
+Query OK, 1 row affected (0.21 sec)
+
+mysql> select * from sc;
++----+--------+
+| id | name   |
++----+--------+
+|  1 | weiyi  |
+|  2 | xie    |
+|  3 | waitao |
+|  4 | kuzi   |
+|  5 | shuiyi |
+|  6 | wazi   |
++----+--------+
+6 rows in set (0.00 sec)
+
+mysql> delete from sc where  name="shuiyi";
+Query OK, 1 row affected (0.16 sec)
+
+mysql> select * from sc where name="wazi";
++----+------+
+| id | name |
++----+------+
+|  6 | wazi |
++----+------+
+1 row in set (0.00 sec)
+
+mysql> select * from sc where id=2;
++----+------+
+| id | name |
++----+------+
+|  2 | xie  |
++----+------+
+1 row in set (0.00 sec)
+
+mysql>
