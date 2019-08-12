@@ -1,7 +1,4 @@
-
-# coding: utf-8
-
-# #1.1五角数
+ #1.1
 
 def getPentalNumber(n):   
     num=0
@@ -37,7 +34,7 @@ sumDigits(345)
 
 
 
-#1.3 升序
+ #1.3 
 
 def displaySortedNumbers(num1,num2,num3):  
     res = [num1,num2,num3]
@@ -48,7 +45,7 @@ displaySortedNumbers(6,5,4)
 
 
 
-#4、时间
+ # 1.4
 
 import time                   
 
@@ -57,7 +54,7 @@ print("本地时间为 :", localtime)
 
 
 
- #5、打印字符
+ #1.5
 
 def printChars(ch1, ch2,numberPerLine): 
     # print(ord(ch2))
@@ -79,7 +76,7 @@ start()
 
 
 
-  # 6返回一年的天数
+  # 1.6
 
 from datetime import date        
 
@@ -92,7 +89,7 @@ print('There are {} days between {} and {}'.format(delta.days, firstDate, lastDa
 
 
 
-#7、显示角
+# 1.7
 
 import math                         
 def distance(x1,y1,x2,y2):
@@ -108,7 +105,7 @@ start()
 
 
 
-#8、梅森素数
+# 1.8
 
 def Mersenne_prime(P):     
     print('P值    梅森素数（P^2-1）')
@@ -126,8 +123,7 @@ def start():
 Start()
 
 
-# In[ ]:
- #9、财务程序，计算未来投资值。
+ #1.9
 
 def futureIn(money,rate,year):   
     for i in range(1,year*12+1):
@@ -142,10 +138,9 @@ def start():
 start()
 
 
-# In[ ]:
+# 1.10
 
-
-def Roll_dice():            #10、掷骰子
+def Roll_dice():            
     import random
     dice1=random.randint(1,6)
     dice2=random.randint(1,6)
@@ -180,10 +175,10 @@ def start():
 start()
 
 
-# In[ ]:
 
 
-# 第二次作业第一题 矩形
+
+# 2.1
 class juxing(object):
     def __init__(self,width,height):
         self.width=width
@@ -204,7 +199,7 @@ if __name__ == "__main__":
 # In[ ]:
 
 
-# 第二次作业第四题
+# 2.4
 class RegularPolygon(object):
     def __init__(self,n=3,side=1,x=0,y=0):
         self.__n=int(n)
